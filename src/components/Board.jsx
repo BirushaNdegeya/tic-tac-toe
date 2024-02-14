@@ -3,12 +3,17 @@ import Square from "./Square";
 
 const Board = () => {
    const [squares, setSquares] = useState(Array(9).fill(null));
+   const [count, setCount] = useState(0);
 
    const handleClick = () => {
       const nextSquare = squares.slice();
-      nextSquare[0] = "X";
+      nextSquare[count] = "X";
       setSquares(nextSquare);
+      console.log(squares);
+      setCount(count + 1)
    };
+
+   console.log(squares);
 
 
    return (
