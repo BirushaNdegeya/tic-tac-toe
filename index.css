@@ -15,11 +15,19 @@ html {
    padding: 20px;
 }
 
+
 .square {
-   padding: 10px;
    background-color: #fff;
-   border: 3px solid #000;
-   font-weight: bold;
+   font-weight: bolder;
    cursor: pointer;
-   margin-left: 10px;
+   border: 1px solid black;
+   font-size: 1.3rem;
+   width: 50px;
+   height: 50px;
+}
+
+.board-row {
+   width: 150px;
+   display: flex;
+   flex-grow: 1;
 }

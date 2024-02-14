@@ -7,14 +7,6 @@ const App = () => {
    return (
       <React.Fragment>
          <Square />
-         <Square />
-         <Square />
-         <Square />
-         <Square />
-         <Square />
-         <Square />
-         <Square />
-         <Square />
       </React.Fragment>
    );
 };
