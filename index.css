@@ -21,4 +21,5 @@ html {
    border: 3px solid #000;
    font-weight: bold;
    cursor: pointer;
+   margin-left: 10px;
 }
