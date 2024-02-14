@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Square = ( { value } ) => {
+const Square = () => {
+   const [value, setValue] = useState(null);
 
    const handleClick = () => {
-      console.log(`Clicked the button number ${value}`);
+      setValue("X");
    }
 
    return (
