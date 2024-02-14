@@ -31,3 +31,8 @@ html {
    display: flex;
    flex-grow: 1;
 }
+
+.container {
+   border: 1px solid #000;
+   width: 152px;
+}
