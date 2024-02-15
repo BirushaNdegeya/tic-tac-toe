@@ -25,24 +25,29 @@ const calculateWinner = (squares) => {
 const Board = ( { xIsNext, squares, onPlay } ) => {
    function handleClick(i) {
       if (calculateWinner(squares) || squares[i]) {
-        return;
+         return;
       }
       const nextSquares = squares.slice();
       if (xIsNext) {
-        nextSquares[i] = 'X';
+         nextSquares[i] = 'X';
       } else {
-        nextSquares[i] = 'O';
+         nextSquares[i] = 'O';
       }
       onPlay(nextSquares);
-    }
-  
-    const winner = calculateWinner(squares);
-    let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
+   }
+
+   function jumpTo (nextMove) {
+
+   }
+   
+
+   const winner = calculateWinner(squares);
+   let status;
+   if (winner) {
+   status = 'Winner: ' + winner;
+   } else {
       status = 'Next player: ' + (xIsNext ? 'X' : 'O');
-    }
+   }
 
 
    return (
