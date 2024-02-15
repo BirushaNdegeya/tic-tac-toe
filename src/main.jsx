@@ -1,6 +1,6 @@
 import React, { StrictMode } from "react";
 import ReactDOM from 'react-dom/client';
-import Game from "./components/Game";
+import Game from "./Game";
 
 const App = () => {
    return (
