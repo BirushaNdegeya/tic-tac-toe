@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Square from "./Square";
+import Game from "./Game";
 
 
 const calculateWinner = (squares) => {
@@ -48,7 +49,7 @@ const Board = () => {
    if (winner) {
       status = "Winner: " + winner;
    } else {
-      status = "Winner: " + (xIsNext ? "X" : "O");
+      status = "Next Player : " + (xIsNext ? "X" : "O");
    }
    
    return (

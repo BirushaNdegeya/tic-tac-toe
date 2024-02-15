@@ -1,12 +1,11 @@
 import React, { StrictMode } from "react";
 import ReactDOM from 'react-dom/client';
-import Board from "./components/Board";
-
+import Game from "./components/Game";
 
 const App = () => {
    return (
       <React.Fragment>
-         <Board />
+         <Game />
       </React.Fragment>
    );
 };
