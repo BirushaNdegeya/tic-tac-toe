@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Square from "./Square";
-import Game from "../Game";
-
 
 const calculateWinner = (squares) => {
    const lines = [
@@ -24,34 +22,29 @@ const calculateWinner = (squares) => {
 }
 
 
-const Board = () => {
-
-   const [squares, setSquares] = useState(Array(9).fill(null));
-   const [xIsNext, setXIsNext] = useState(true);
-   
-   
-   const handleClick = (i) => {
-      if (squares[i] || calculateWinner(squares)) {
-         return;
+const Board = ( { xIsNext, squares, onPlay } ) => {
+   function handleClick(i) {
+      if (calculateWinner(squares) || squares[i]) {
+        return;
       }
       const nextSquares = squares.slice();
       if (xIsNext) {
-         nextSquares[i] = "X";
+        nextSquares[i] = 'X';
       } else {
-         nextSquares[i] = "O";
+        nextSquares[i] = 'O';
       }
-      setSquares(nextSquares);
-      setXIsNext(!xIsNext);
-   };
-   
-   const winner = calculateWinner(squares);
-   let status;
-   if (winner) {
-      status = "Winner: " + winner;
-   } else {
-      status = "Next Player : " + (xIsNext ? "X" : "O");
-   }
-   
+      onPlay(nextSquares);
+    }
+  
+    const winner = calculateWinner(squares);
+    let status;
+    if (winner) {
+      status = 'Winner: ' + winner;
+    } else {
+      status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    }
+
+
    return (
       <React.Fragment>
          <div className="status">{status}</div>
